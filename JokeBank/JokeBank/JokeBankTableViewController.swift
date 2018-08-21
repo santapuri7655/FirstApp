@@ -12,13 +12,12 @@ class JokeBankTableViewController: UITableViewController {
     
     struct JokeBank {
         static let CleanJokes = "clean jokes"
-        static let RacistJokes = "racist jokes"
         static let JokeOfTheDay = "joke of the day"
         static let LatestJokes = "latest jokes"
         static let FamilyJokes = "family jokes"
     }
     
-    var Jokes = [JokeBank.CleanJokes, JokeBank.RacistJokes, JokeBank.JokeOfTheDay, JokeBank.LatestJokes, JokeBank.FamilyJokes]
+    var Jokes = [JokeBank.CleanJokes, JokeBank.JokeOfTheDay, JokeBank.LatestJokes, JokeBank.FamilyJokes]
 
     override func viewDidLoad() {
         super.viewDidLoad()
