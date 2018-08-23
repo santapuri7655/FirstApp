@@ -17,16 +17,40 @@ class JokeBankTableViewController: UITableViewController {
         static let FamilyJokes = "family jokes"
     }
     
-    var Jokes = [JokeBank.CleanJokes, JokeBank.JokeOfTheDay, JokeBank.LatestJokes, JokeBank.FamilyJokes]
+    struct JokeDefinition {
+        static let cleanJokes = "A child asked his father, How were people born? \n\n So his father said, Adam and Eve made babies, then their babies became adults and made babies, and so on. \n\nThe child then went to his mother, asked her the same question and she told him, We were monkeys then we evolved to become like we are now. \n\nThe child ran back to his father and said, You lied to me! His father replied, No, your mom was talking about her side of the family."
+        static let JokeOfTheDay = "No jokes found matching your search terms."
+        static let LatestJokes = "This is my latest joke"
+        static let FamilyJokes = "Family jokes are fun."
+    }
+    
+    var jokes : [Joke] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let joke1 = Joke()
+        joke1.title = JokeBank.CleanJokes
+        joke1.text = JokeDefinition.cleanJokes
+        
+        let joke2 = Joke()
+        joke2.title = JokeBank.JokeOfTheDay
+        joke2.text = JokeDefinition.JokeOfTheDay
+        
+        let joke3 = Joke()
+        joke3.title = JokeBank.LatestJokes
+        joke3.text = JokeDefinition.LatestJokes
+        
+        let joke4 = Joke()
+        joke4.title = JokeBank.FamilyJokes
+        joke4.text = JokeDefinition.FamilyJokes
+        
+        jokes = [joke1, joke2, joke3, joke4]
     }
 
     //How many?
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return Jokes.count //Returning number of things to view inside of the table
+        return jokes.count //Returning number of things to view inside of the table
     }
 
     //What goes inside?
@@ -35,7 +59,7 @@ class JokeBankTableViewController: UITableViewController {
         
         //print(indexPath.row) --> cronological sequence of number of items in an Array. Prints 0,1,2,3,4 --> number of elements in an array.
         
-        cell.textLabel?.text = Jokes[indexPath.row]
+        cell.textLabel?.text = jokes[indexPath.row].title
 
         return cell
     }
@@ -45,7 +69,7 @@ class JokeBankTableViewController: UITableViewController {
         print("tapped")
         print(indexPath.row)
         
-        let selectedJoke = Jokes[indexPath.row]
+        let selectedJoke = jokes[indexPath.row]
         
         performSegue(withIdentifier: "moveToJokeDefinition" , sender: selectedJoke)
         //withIdentifier: attributes inspector > indetifier > "identifier name"
@@ -55,11 +79,9 @@ class JokeBankTableViewController: UITableViewController {
         
         if let jokeVC = segue.destination as? JokeBankViewController {
             
-            if let selectedJoke = sender as? String {
+            if let selectedJoke = sender as? Joke {
                 jokeVC.joke = selectedJoke
             }
-            
-            
         }
     }
 

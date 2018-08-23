@@ -13,6 +13,7 @@
 		ABB7741C212599B3004094BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB7741A212599B3004094BB /* Main.storyboard */; };
 		ABB7741E212599B4004094BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB7741D212599B4004094BB /* Assets.xcassets */; };
 		ABB77421212599B4004094BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB7741F212599B4004094BB /* LaunchScreen.storyboard */; };
+		ABD11AAC212E3CEE009AED20 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD11AAB212E3CEE009AED20 /* Joke.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		ABB7741D212599B4004094BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABB77420212599B4004094BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABB77422212599B4004094BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABD11AAB212E3CEE009AED20 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				ABB77416212599B3004094BB /* AppDelegate.swift */,
 				ABB6D3322125A79E003513E9 /* JokeBankTableViewController.swift */,
 				AB1F8AE1212703A60027497D /* JokeBankViewController.swift */,
+				ABD11AAB212E3CEE009AED20 /* Joke.swift */,
 				ABB7741A212599B3004094BB /* Main.storyboard */,
 				ABB7741D212599B4004094BB /* Assets.xcassets */,
 				ABB7741F212599B4004094BB /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				AB1F8AE2212703A60027497D /* JokeBankViewController.swift in Sources */,
 				ABB6D3332125A79E003513E9 /* JokeBankTableViewController.swift in Sources */,
+				ABD11AAC212E3CEE009AED20 /* Joke.swift in Sources */,
 				ABB77417212599B3004094BB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
