@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB1F8AE2212703A60027497D /* JokeBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1F8AE1212703A60027497D /* JokeBankViewController.swift */; };
+		ABB6D3332125A79E003513E9 /* JokeBankTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6D3322125A79E003513E9 /* JokeBankTableViewController.swift */; };
 		ABB77417212599B3004094BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB77416212599B3004094BB /* AppDelegate.swift */; };
-		ABB77419212599B3004094BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB77418212599B3004094BB /* ViewController.swift */; };
 		ABB7741C212599B3004094BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB7741A212599B3004094BB /* Main.storyboard */; };
 		ABB7741E212599B4004094BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB7741D212599B4004094BB /* Assets.xcassets */; };
 		ABB77421212599B4004094BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB7741F212599B4004094BB /* LaunchScreen.storyboard */; };
+		ABD11AAC212E3CEE009AED20 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD11AAB212E3CEE009AED20 /* Joke.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB1F8AE1212703A60027497D /* JokeBankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeBankViewController.swift; sourceTree = "<group>"; };
+		ABB6D3322125A79E003513E9 /* JokeBankTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeBankTableViewController.swift; sourceTree = "<group>"; };
 		ABB77413212599B3004094BB /* JokeBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JokeBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB77416212599B3004094BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ABB77418212599B3004094BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ABB7741B212599B3004094BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABB7741D212599B4004094BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABB77420212599B4004094BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABB77422212599B4004094BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABD11AAB212E3CEE009AED20 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				ABB77416212599B3004094BB /* AppDelegate.swift */,
-				ABB77418212599B3004094BB /* ViewController.swift */,
+				ABB6D3322125A79E003513E9 /* JokeBankTableViewController.swift */,
+				AB1F8AE1212703A60027497D /* JokeBankViewController.swift */,
+				ABD11AAB212E3CEE009AED20 /* Joke.swift */,
 				ABB7741A212599B3004094BB /* Main.storyboard */,
 				ABB7741D212599B4004094BB /* Assets.xcassets */,
 				ABB7741F212599B4004094BB /* LaunchScreen.storyboard */,
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABB77419212599B3004094BB /* ViewController.swift in Sources */,
+				AB1F8AE2212703A60027497D /* JokeBankViewController.swift in Sources */,
+				ABB6D3332125A79E003513E9 /* JokeBankTableViewController.swift in Sources */,
+				ABD11AAC212E3CEE009AED20 /* Joke.swift in Sources */,
 				ABB77417212599B3004094BB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
