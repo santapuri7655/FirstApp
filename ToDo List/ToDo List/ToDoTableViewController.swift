@@ -48,10 +48,20 @@ class ToDoTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedToDo = toDos[indexPath.row]
+        performSegue(withIdentifier: "moveToComplete", sender: selectedToDo)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let addToDo = segue.destination as? AddToDoItemViewController {
             addToDo.toDoVC = self
         }
+        
+        if let completeVC = segue.destination as? ToDoCompleteViewController {
+            if let selectedToDo = sender as? ToDo {
+              completeVC.toDo = selectedToDo
+            }
+        }
     }
-
 }

@@ -40,6 +40,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="AwY-Rd-WE3" kind="show" identifier="moveToComplete" id="PTA-eD-AI9"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5oI-29-JCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,6 +123,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3U-e5-9TS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1879" y="33"/>
+        </scene>
+        <!--Complete-->
+        <scene sceneID="lnf-Op-CSV">
+            <objects>
+                <viewController title="Complete" id="AwY-Rd-WE3" customClass="ToDoCompleteViewController" customModule="ToDo_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f4J-dK-5sn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwC-QR-UEq">
+                                <rect key="frame" x="20" y="108" width="335" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="TjD-6k-oFz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhN-A5-7oW">
+                                <rect key="frame" x="148.5" y="148" width="78" height="30"/>
+                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="18"/>
+                                <state key="normal" title="Complete"/>
+                                <connections>
+                                    <action selector="pressComplete:" destination="AwY-Rd-WE3" eventType="touchUpInside" id="T5B-FF-NQ5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HwC-QR-UEq" firstAttribute="centerX" secondItem="f4J-dK-5sn" secondAttribute="centerX" id="1J3-VD-5Rl"/>
+                            <constraint firstItem="HwC-QR-UEq" firstAttribute="top" secondItem="8AU-KK-1P2" secondAttribute="top" constant="44" id="9M8-ka-IrA"/>
+                            <constraint firstItem="NhN-A5-7oW" firstAttribute="centerX" secondItem="HwC-QR-UEq" secondAttribute="centerX" id="IRp-oT-hVf"/>
+                            <constraint firstItem="8AU-KK-1P2" firstAttribute="trailing" secondItem="HwC-QR-UEq" secondAttribute="trailing" constant="20" id="ZY3-G6-Nfm"/>
+                            <constraint firstItem="HwC-QR-UEq" firstAttribute="leading" secondItem="8AU-KK-1P2" secondAttribute="leading" constant="20" id="l5e-Fs-usW"/>
+                            <constraint firstItem="NhN-A5-7oW" firstAttribute="top" secondItem="HwC-QR-UEq" secondAttribute="bottom" constant="20" id="ykL-b1-sA0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8AU-KK-1P2"/>
+                    </view>
+                    <connections>
+                        <outlet property="ItemName" destination="HwC-QR-UEq" id="sux-La-WbD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbl-io-Uh7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033" y="808"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Laf-WU-N2K">
