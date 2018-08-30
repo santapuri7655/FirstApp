@@ -21,17 +21,20 @@ class AddToDoItemViewController: UIViewController {
     }
     
     @IBAction func ClickAdd(_ sender: Any) {
-        var newToDo = ToDo()
-        guard let name = EnterItemName?.text
-            else {
-                return
+        
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            let newToDo = ToDoCoreData(context: context)
+            guard let name = EnterItemName?.text
+                else {
+                    return
+            }
+            
+            newToDo.important = Important?.isOn ?? false
+            newToDo.name = name
         }
         
-        newToDo.important = Important?.isOn ?? false
-        newToDo.name = name
-        
-        toDoVC?.toDos.append(newToDo)
-        toDoVC?.tableView.reloadData()
+        //toDoVC?.toDos.append(newToDo)
+        //toDoVC?.tableView.reloadData()
         navigationController?.popViewController(animated: true)
     }
     
