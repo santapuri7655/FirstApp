@@ -12,16 +12,33 @@ class ToDoCompleteViewController: UIViewController {
     
     @IBOutlet weak var ItemName: UILabel?
     
-    var toDo = ToDo()
+    var toDo: ToDo? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ItemName?.text = toDo.name
+        guard let toDo = toDo,
+            let theName = toDo.name
+            else {
+                return
+        }
+        if toDo.important {
+            ItemName?.text = "❗️" + theName
+        } else {
+            ItemName?.text = toDo.name
+        }
     }
     
-    
     @IBAction func pressComplete(_ sender: Any) {
+       
+        guard let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext,
+         let toDo = toDo
+            else {
+                return
+        }
+        context.delete(toDo)
+        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        navigationController?.popViewController(animated: true)
     }
     
 }
